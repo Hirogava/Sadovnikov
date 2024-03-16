@@ -1,4 +1,7 @@
 def book_count(alist):
+    ''' Описание функции:
+    функция для подсчета количества книг пор темам
+    res - словарб, чтобы обращаться к количеству в нем книг'''
     res = {}
     for i in range(len(alist)):
         if len(alist[i][4])>0:
@@ -10,6 +13,9 @@ def book_count(alist):
 
 
 def report(alist):
+    '''Описание функции:
+    функция для создания строк о данных темах и количества в ней книг
+    '''
     with open('count_book.txt', 'w', encoding='utf8') as f:
         for keys in alist:
             f.write(f'Книг для изучения {keys} в библиотеке нашлось: {alist[keys]}\n')
